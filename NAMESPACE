@@ -1,0 +1,16 @@
+import(raster)
+import(zoo)
+import(sp)
+
+importFrom(ncdf,
+           open.ncdf,
+           close.ncdf,
+           att.get.ncdf)
+
+importFrom(rjson,
+           fromJSON)
+
+export('getPoint', 'getRaster',
+       'getRasterDays',
+       'getPointDays', 'getPointRuns',
+       'checkDays')
