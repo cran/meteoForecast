@@ -11,6 +11,8 @@ importFrom(rjson,
            fromJSON)
 
 export('getPoint', 'getRaster',
-       'getRasterDays',
+       'getRasterDays', 'getRasterDay',
        'getPointDays', 'getPointRuns',
-       'checkDays')
+       'checkDays', 'grepVar',
+       'getMFOption', 'setMFOption',
+       'mfService', 'mfExtent', 'mfProj4')
