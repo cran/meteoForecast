@@ -1,6 +1,6 @@
 getPoint <- function(point, vars = 'swflx',
                      day = Sys.Date(), run = '00',
-                     resolution = NULL,
+                     resolution = NULL, vertical = NA,
                      service = mfService()){
 
     
@@ -9,7 +9,7 @@ getPoint <- function(point, vars = 'swflx',
     ## Extract longitude-latitude
     if (is(point, 'SpatialPoints')) {
         if (!isLonLat(point)) {
-            if (require(rgdal, quietly=TRUE)) 
+            if (requireNamespace('rgdal', quietly=TRUE)) 
             point <- spTransform(point, CRS('+proj=longlat +ellps=WGS84'))
             else stop('`rgdal` is needed if `point` is projected.')
         }
@@ -22,7 +22,6 @@ getPoint <- function(point, vars = 'swflx',
     ## Which function to use?
     fun <- switch(service,
                   meteogalicia = 'pointMG',
-                  openmeteo = 'pointOM',
                   gfs = 'pointGFS',
                   nam = 'pointNAM',
                   rap = 'pointRAP')
@@ -31,5 +30,6 @@ getPoint <- function(point, vars = 'swflx',
                            vars = vars,
                            day = as.Date(day),
                            run = run,
-                           resolution = resolution))
+                           resolution = resolution,
+                           vertical = vertical))
 }
