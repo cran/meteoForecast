@@ -1,15 +1,39 @@
-import(raster)
-import(zoo)
-import(sp)
+importFrom("methods",
+           "as", "is")
+importFrom("stats",
+           "window")
+importFrom("utils",
+           "capture.output",
+           "download.file",
+           "read.csv",
+           "setTxtProgressBar",
+           "txtProgressBar")
 
-importFrom(ncdf,
-           open.ncdf,
-           close.ncdf,
-           att.get.ncdf)
+importFrom("XML",
+           "xmlParse",
+           "xmlRoot",
+           "xmlChildren",
+           "xmlToDataFrame")
 
-export('getPoint', 'getRaster',
-       'getRasterDays', 'getRasterDay',
-       'getPointDays', 'getPointRuns',
-       'checkDays', 'grepVar',
-       'getMFOption', 'setMFOption',
-       'mfService', 'mfExtent', 'mfProj4')
+import("raster")
+import("zoo")
+import("sp")
+
+importFrom("ncdf",
+           "open.ncdf",
+           "close.ncdf",
+           "att.get.ncdf")
+
+export('getPoint',
+       'getRaster',
+       'getRasterDays',
+       'getRasterDay',
+       'getPointDays',
+       'getPointRuns',
+       'checkDays',
+       'grepVar',
+       'getMFOption',
+       'setMFOption',
+       'mfService',
+       'mfExtent',
+       'mfProj4')
