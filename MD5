@@ -1,5 +1,5 @@
-feae57c1d4fcc3df747e4e15c0c0e9c7 *ChangeLog
-6c4b4d1b9d1cc9dc6e458426968b0240 *DESCRIPTION
+3ab4dd3a09bc0b353c28f50ed38b17a7 *ChangeLog
+12e2ceea0526fb0532e45a9cef55df20 *DESCRIPTION
 dc2ed495c2efb5b32db11690a51746d9 *NAMESPACE
 4a76d7bdc1007ba27fc63a06356163cc *R/checkDays.R
 d8a1d969bbb3321d3ee66d816a213104 *R/composeURL.R
@@ -23,4 +23,4 @@ fe5d0007ba68fc6f757d966174c3b956 *man/getPoint.Rd
 1b448a15acf9e8b8fb91e66040447eb0 *man/getRaster.Rd
 75b9d6abc39f4f371c185c0850bc7e62 *man/meteo-package.Rd
 e8dfa1b8ed30661baf64349710e150cf *man/options.Rd
-feffc22b859c77bc600a0c1994c88b57 *man/vars.Rd
+cfe1dd74291402f10fc72db93bb2ea2d *man/vars.Rd
