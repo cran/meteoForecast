@@ -1,7 +1,7 @@
-4f7b152e0b8672558c6a2a9491ce9e47 *DESCRIPTION
+5940ebef1512f0cd987988bd02a763bc *DESCRIPTION
 f4d7b08b594fb409f74c15c6c2315e40 *NAMESPACE
 4a76d7bdc1007ba27fc63a06356163cc *R/checkDays.R
-3d8f4314afd3aa645b809428474fb0a1 *R/composeURL.R
+b922fffb3537b712ceda339e2e7ca6c4 *R/composeURL.R
 a68d27ab27d2fd618d20c21d61c7222f *R/envir.R
 a7b51f364da8aabb11a506204f51ecb4 *R/getPoint.R
 51d9a884fe072d6e62d6e60d51c78054 *R/getPointDays.R
@@ -9,12 +9,12 @@ a7b51f364da8aabb11a506204f51ecb4 *R/getPoint.R
 a239bd2968196f37aece5cfb023d11bf *R/getRaster.R
 040f848436f7dc1bd23172417c2763f7 *R/getRasterDay.R
 ed6fd75b2d3e912f3bcc07ef96c08f1d *R/getRasterDays.R
-735e793895413ae0d0f0d3792407b369 *R/grepVar.R
+6b3b08cb682197f00652af5bb5c81b50 *R/grepVar.R
 12019145a24965d65f45f1f38e999e4e *R/misc.R
 ec47e28896f5ee259a89c6eb99f82304 *R/pointMeteoGalicia.R
 354da07d0b3c6b1bedf9b8500431b027 *R/pointNCDC.R
 fd57ebed748cbcc69d66d5f644149015 *R/rasterGFS.R
-bbe1cd438bca0cd85a26bd39c82d04e2 *R/rasterMeteoGalicia.R
+ae492895057163df70e944a9439d93dd *R/rasterMeteoGalicia.R
 695c4a62681cdcadbb6cf099bc653ca4 *R/rasterNCDC.R
 978e3781a5b02fe4cb659c30bf3038dd *R/zzz.R
 13259bcf58eb73c8afcf2d2cf91e7fda *inst/CITATION
