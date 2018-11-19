@@ -1,7 +1,7 @@
-5940ebef1512f0cd987988bd02a763bc *DESCRIPTION
+db60f7a416ec7069fc758c7a3e4e7ce9 *DESCRIPTION
 f4d7b08b594fb409f74c15c6c2315e40 *NAMESPACE
 4a76d7bdc1007ba27fc63a06356163cc *R/checkDays.R
-b922fffb3537b712ceda339e2e7ca6c4 *R/composeURL.R
+9452bb602898d8ddaa7e76a0caae4b62 *R/composeURL.R
 a68d27ab27d2fd618d20c21d61c7222f *R/envir.R
 a7b51f364da8aabb11a506204f51ecb4 *R/getPoint.R
 51d9a884fe072d6e62d6e60d51c78054 *R/getPointDays.R
@@ -18,8 +18,8 @@ ae492895057163df70e944a9439d93dd *R/rasterMeteoGalicia.R
 695c4a62681cdcadbb6cf099bc653ca4 *R/rasterNCDC.R
 978e3781a5b02fe4cb659c30bf3038dd *R/zzz.R
 13259bcf58eb73c8afcf2d2cf91e7fda *inst/CITATION
-00fcfa6294136bde70b4dd07d2115c66 *man/getPoint.Rd
-edb4eae080a2ded24ac616e6ddc9d1bb *man/getRaster.Rd
-75b9d6abc39f4f371c185c0850bc7e62 *man/meteo-package.Rd
+ee3e902c5decc64964af6ef05d1a3d7e *man/getPoint.Rd
+4418e9e8903f4560b31bc7979809df57 *man/getRaster.Rd
+0501ff7d03354b7bbcf96902715c9e38 *man/meteo-package.Rd
 5189f80e0002e8c31448d7ebd8fbff91 *man/options.Rd
-6cc9ea2839d72f30b85181b01948f6cb *man/vars.Rd
+6b0a1b05f292bfa25d68445b7639f5de *man/vars.Rd
