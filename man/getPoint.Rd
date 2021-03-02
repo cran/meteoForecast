@@ -28,7 +28,8 @@ getPointRuns(point, var = "swflx",
 }
 \arguments{
 
-  \item{point}{Coordinates of the location. It can be a \code{SpatialPoints} or a \code{numeric} of length 2.}
+  \item{point}{Coordinates of the location. It can be a
+  \code{SpatialPoints} or a \code{numeric} of length 2 (lon, lat).}
 
   \item{var, vars}{Character. The name of the variables to retrieve. Use \code{\link{grepVar}} to know what variables are available in each service. \code{getPointRuns} only works with one variable.}
 
@@ -70,14 +71,27 @@ These functions download data from the MeteoGalicia and NCEP (GFS, RAP, NAM) ser
 
 \author{Oscar Perpiñán Lamigueiro with contributions from Marcelo Almeida}
 
+\references{
+  \url{http://mandeo.meteogalicia.es/thredds/catalogos/WRF_2D/catalog.html}
+
+  \url{http://mandeo.meteogalicia.es/thredds/catalog/gfs_0p25/fmrc/catalog.html}
+
+  \url{https://www.ncei.noaa.gov/thredds/catalog/model-nam218/catalog.html}
+
+  \url{https://www.ncei.noaa.gov/thredds/catalog/model-rap130/catalog.html}
+
+}
+
 \seealso{
   \code{\link{getRaster}}
 }
 
 \examples{
 \dontrun{
-  today <- Sys.Date()
-  testDay <- today - 7
+  ## If some of the next examples do not work, try using a different
+  ## date. Check availability for each service with the links included in
+  ## the references section.
+  testDay <- Sys.Date() - 1
 
   ## temperature (Kelvin) forecast from meteogalicia
   tempK <- getPoint(c(0, 40), vars = 'temp', day = testDay)
@@ -100,7 +114,7 @@ These functions download data from the MeteoGalicia and NCEP (GFS, RAP, NAM) ser
   xyplot(vars)
 
   ## Vertical coordinates
-  tempK1000 <- getPoint(c(101,6),
+  tempK1000 <- getPoint(c(0,40),
                         vars = "Temperature_surface",
                         day = testDay,
                         service ="gfs", vertical = 1000)
@@ -108,14 +122,14 @@ These functions download data from the MeteoGalicia and NCEP (GFS, RAP, NAM) ser
   ## Time sequence
   radDays <- getPointDays(c(0, 40),
                           start = testDay - 3,
-                          end = testDay + 2)
+                          end = testDay)
   
   xyplot(radDays)
 
   ## Variability between runs
   radRuns <- getPointRuns(c(0, 40),
                           start = testDay - 3,
-                          end = testDay + 2)
+                          end = testDay)
   xyplot(radRuns, superpose = TRUE)
   
   ## variability around the average

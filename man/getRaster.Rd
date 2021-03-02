@@ -83,13 +83,13 @@ checkDays(start, end, vars, remote = FALSE,
 }
 
 \references{
-  \url{http://www.meteogalicia.es/web/modelos/threddsIndex.action}
+  \url{http://mandeo.meteogalicia.es/thredds/catalogos/WRF_2D/catalog.html}
 
-  \url{https://www.ncei.noaa.gov/thredds/catalog/gfs-004-files/catalog.html}
+  \url{http://mandeo.meteogalicia.es/thredds/catalog/gfs_0p25/fmrc/catalog.html}
 
-  \url{https://www.ncei.noaa.gov/thredds/catalog/rap130/catalog.html}
+  \url{https://www.ncei.noaa.gov/thredds/catalog/model-nam218/catalog.html}
 
-  \url{https://www.ncei.noaa.gov/thredds/catalog/nam218/catalog.html}
+  \url{https://www.ncei.noaa.gov/thredds/catalog/model-rap130/catalog.html}
 
 }
 
@@ -102,8 +102,12 @@ checkDays(start, end, vars, remote = FALSE,
 
 \examples{
 \dontrun{
-today <- Sys.Date()
-testDay <- today - 7
+
+## If some of the next examples do not work, try using a different
+## date. Check availability for each service with the links included in
+## the references section.
+
+testDay <- Sys.Date() - 1
 
 ## Retrieve raster data
 wrf <- getRaster('temp', day = testDay)
@@ -117,10 +121,13 @@ hovmoller(wrf)
 
 ## Using box and frames specification
 mfExtent('gfs')
+
 cloudGFS <- getRaster('Temperature_surface',
                       day = testDay,
-                      box = c(-10, 10, -10, 10),
+                      box = c(-30, 30, 30, 50),
                       service = 'gfs')
+
+levelplot(cloudGFS, layout = c(1, 1))
 
 mfExtent('nam')
 cloudNAM <- getRaster('Temperature_surface',
@@ -152,7 +159,7 @@ hovmoller(wrfDays, par.settings = BTCTheme, contour = TRUE, cuts = 10)
 
 NAMDays <- getRasterDays('Temperature_surface',
                          start = testDay - 3,
-                         end = testDay + 2,
+                         end = testDay,
                          box = c(-100, -80, 30, 50),
                          service = 'nam')
 
